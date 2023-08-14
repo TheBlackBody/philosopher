@@ -6,7 +6,7 @@
 /*   By: sfernand <sfernand@student.42nice.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/08/10 18:36:14 by sfernand          #+#    #+#             */
-/*   Updated: 2023/08/11 16:41:34 by sfernand         ###   ########.fr       */
+/*   Updated: 2023/08/15 00:04:16 by sfernand         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ void	sleep_think(t_philo *philo)
 	pthread_mutex_lock(&philo->pa->write_mutex);
 	write_status("is thinking\n", philo);
 	pthread_mutex_unlock(&philo->pa->write_mutex);
+	ft_usleep(1);
 }
 
 void	activity(t_philo *philo)

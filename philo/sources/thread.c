@@ -20,7 +20,8 @@ void	*is_dead(void	*data)
 	ft_usleep(philo->pa->die + 1);
 	pthread_mutex_lock(&philo->pa->time_eat);
 	pthread_mutex_lock(&philo->pa->finish);
-	if (!check_death(philo, 0) && !philo->finish && ((actual_time() - philo->ms_eat) \
+	if (!check_death(philo, 0) && !philo->finish
+		&& ((actual_time() - philo->ms_eat) \
 		>= (long)(philo->pa->die)))
 	{
 		pthread_mutex_unlock(&philo->pa->time_eat);
